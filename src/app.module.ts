@@ -7,9 +7,13 @@ import { TrafficModule } from './traffic/traffic.module';
 import { WasteModule } from './waste/waste.module';
 import { WaterModule } from './water/water.module';
 import { DatabaseModule } from './database/database.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     AuthModule,
     CommonModule,
     TrafficModule,
