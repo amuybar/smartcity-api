@@ -18,6 +18,6 @@ export class TrafficController {
 
   @Get(':location')
   async getByLocation(@Param('location') location: string) {
-     return this.trafficService.getTrafficByLocation(location)
+    return this.trafficService.getTrafficByLocation(location);
   }
 }
